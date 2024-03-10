@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-index {
+    font-family: Arial, sans-serif;
+    background-image: url(image/desk-index.jpg);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 30px 10px rgba(0,0,0,0.7);
+}
+
+/*** Heading - automatic text ***/
+#heading {
+    margin: auto;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-bottom: 1px solid red;
+}
+
+/*** Login form ***/
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: auto;
+    margin: auto;
+    background-color: rgba(0, 0, 0,0.5);
+    color: white;
+    border: 1px solid red;
+    /*box-shadow: 0 0 10px black;*/
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.login-form h1 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    font-size: 14px;
+}
+
+input:focus {
+    border: 1px solid red;
+}
+
+.alert-name, .alert-password {
+    color: white;
+    background-color: red;
+    padding: 3px;
+    margin-bottom: 10px;
+    display: none;
+    font-size: 14px;
+}
+
+/*** Login button ***/
+#loginButton {
+    padding: 10px;
+    background-color: #8b8b8b;
+    color: black;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 10px;
+    outline: none;
+    border: 1px solid black;
+}
+
+#loginButton:hover {
+    border: 1px solid red;
+    background-color: black;
+    color: white;
+}
+
+/*** Loader ***/
+#loader {
+    border: 16px solid white; 
+    border-top: 16px solid black; 
+    border-bottom: 16px solid black; 
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0,0.5);
+    margin: -40px 0 0 -40px;
+}
+
+#loader p {
+    text-align: center;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#loaderText {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    display: none;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+/*** Responsive ***/
+@media screen and (max-width: 1600px) {
+    .login-form {
+        width: 30%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .login-form {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .login-form {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .login-form {
+        width: 80%;
+    }
+}

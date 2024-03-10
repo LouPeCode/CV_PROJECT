@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to CV_project</title>
+    <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style-index.css">
+</head>
+<body class="body-index">
+    
+    <!-- Heading - automatic text -->
+    <div id="heading"></div>
+    
+    <!-- Login form -->
+    <form id="loginForm" class="login-form">
+        <h1>Přihlášení:</h1>
+        <label for="username">Vaše jméno nebo název firmy:*</label>
+        <input type="text" id="username" name="username" required>
+        <div class="alert-name"></div>
+        <label for="password" title="nápověda: první písmeno velké, zbytek malé a má **** písmena">Heslo (jméno zájemce):*</label>
+        <input type="password" id="password" name="password" placeholder="P***" required>
+        <div class="alert-password"></div>
+        <button type="button" id="loginButton">Přihlásit se</button>
+    </form>
+    
+    <!-- Loader -->
+    <div id="loader"><p>CV</p></div>
+    <div id="loaderText"><p>Načítám...</p></div>
+
+    <script src="script-index.js"></script>
+    
+</body>
+</html>
+
